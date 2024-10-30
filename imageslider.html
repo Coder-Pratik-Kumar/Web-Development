@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ImagesSlider
+        </title>
+        <style>
+            body{
+                background-color: rgb(9, 9, 102);
+            }
+            .container{
+                justify-content: center;
+                height: 450px;
+                display: flex;
+                width: 70%;
+                gap: 10px;
+                margin: 100px 0 0 200px;
+                drop-shadow: 0 0 10px rgba(244, 0, 0, 0.5);
+            }
+            .container img{
+                border-radius: 20px;
+                width: 10%;
+                height: 100%;
+                object-fit: cover;
+               border: 1px solid #c21b1b;
+               transition: width 0.3s ease;
+            }
+            img:hover{
+                width: 25%;
+                box-shadow: 0px 0 10px rgba(244, 0, 0, 0.5);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="./images/m1.jpg"/>
+            <img src="./images/m2.jpg"/>
+            <img src="./images/m3.jpg"/>
+            <img src="./images/m4.jpg"/>
+        </div>
+    </body>
+</html>

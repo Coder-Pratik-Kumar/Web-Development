@@ -1,0 +1,4 @@
+{
+    "openctx.enable": false,
+    "java.debug.settings.onBuildFailureProceed": true
+}

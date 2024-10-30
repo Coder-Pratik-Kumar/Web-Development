@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <title>Vertical Navigation Bar</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#logo {
+    font-size: 1.5em;
+}
+
+.vertical-nav {
+    width: 200px;
+    /* Adjust width as needed */
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.nav-links li {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.nav-links li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #555;
+}
+
+.content {
+    margin-left: 220px;
+    /* Adjust based on the width of vertical-nav */
+    padding: 50px 20px;
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div id="logo">GFG</div>
+        </div>
+    </header>
+
+    <nav class="vertical-nav">
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="content">
+        <div class="container">
+            <h1>Welcome to Our Website!</h1>
+            <p>Get plenty of knowledge by our wonderful courses.</p>
+        </div>
+    </section>
+
+</body>
+
+</html>

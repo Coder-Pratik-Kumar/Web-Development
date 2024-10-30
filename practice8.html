@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>business</title> 
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                background-color: rgb(219, 215, 211);
+            }
+            header{
+                padding: 20px 0;
+                background-color:#005f73;
+                display: flex;
+               justify-content: space-between;
+               align-items: center;
+               color: white;
+            }
+            header h1{
+                margin-left: 20px;
+            }
+            header nav{
+                margin-right: 10px;
+            }
+            header nav ul{
+                display: flex;
+            }
+            header nav ul li{
+                list-style: none;
+               margin: 10px;
+            }
+            header nav ul li a{
+                text-decoration: none;
+                color: #fff;
+                font-weight: bold;
+            }
+            .main{
+                background-image: url(./images/business.jpg);
+                background-size: cover;
+                background-position: center;
+                height: 400px;
+                padding: 20px 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                text-align: center;
+            }
+            .pratik{
+               padding: 20px;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            .main .pratik h1{
+                font-size: 40px;
+                margin-top: 20px;
+            }
+            .main .pratik button{
+                background-color: rgb(240, 156, 100);
+                border-radius: 10px;
+                font-size: 15px;
+                color: white;
+                font-weight: bold;
+                padding: 5px;
+                transition: background-color 0.3s ease;
+            }
+            .pratik button:hover{
+                background-color: aquamarine;
+                color: black;
+            }
+            .Services{
+                padding: 20px;
+                text-align: left;
+                background-color: #fff;
+            }
+            .Services h1{
+                color: blueviolet;
+            }
+            
+            .Services ul li{
+                margin: 5px;
+            }
+            .Services ul li:hover{
+                color: blue;
+                cursor: pointer;
+            }
+            .About_Us{
+                padding: 20px;
+            }
+            .About_Us h1{
+               color:rgb(41, 182, 41);
+            }
+           .Contacts{
+            padding: 20px;
+            background-color: #fff;
+           }
+           .Contacts h1{
+            color:red;
+           }
+           footer{
+            background-color:#005f73;
+            height: 100px;
+            color: #fff;
+            text-align: center;
+            line-height: 80px;
+           }
+           @media screen and (max-width: 700px){
+            .Services, .About_Us, .Contacts {
+            text-align: center;
+    }
+    .Services ul {
+        list-style-type: none;
+        padding: 0;
+    }
+           }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Our business</h1>
+            <nav>
+                <ul>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="main">
+            <div class="pratik">
+                <h1>Welcome to Our Business</h1>
+                <p>Welcome To Our Services</p>
+                <button>Join Us</button>
+            </div>
+        </section>
+        
+            <section class="Services">
+                <h1>Our Services</h1>
+                <p>We offer a wide range of services to help your business grow:</p>
+                <ul>
+                    <li>Consulting Services</li>
+                    <li>Professional Training</li>
+                    <li>Marketing and Advertisement Solution</li>
+                </ul>
+            </section>
+            <section class="About_Us">
+                <h1>About Us</h1>
+                <p>We are a dedicated team with 
+                    over 10 years of experience 
+                    in business development and 
+                    management. Our mission is to 
+                    provide high-quality services 
+                    tailored to each client's unique 
+                    needs.</p>
+            </section>
+            <section class="Contacts">
+                <h1>Contact Us</h1>
+                <p>Phone:(91+) 8859295480</p>
+                <p>Email: pratiksharma5711@gmail.com</p>
+            </section>
+       
+        <footer>
+            Thanks For Contacting Us
+        </footer>
+    </body>
+</html>

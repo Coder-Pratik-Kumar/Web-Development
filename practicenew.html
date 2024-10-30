@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practicing</title>
+    </head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            max-width:1200px;
+            overflow: hidden;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+        }
+        .navcontainer{
+            width: 200px;
+            background-color: #333;
+            position: fixed; 
+            top: 0;
+            left: 0;
+            bottom: 0;
+            overflow-y: auto;
+        }
+        .ullistcontainer{
+            list-style-type: none;
+            margin: 0;
+            padding: 20px 0;
+        }
+        .navcontainer li{
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .navcontainer a{
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            display: block;
+        }
+        .navcontainer a:hover{
+            background-color: #555;
+        }
+        .sectioncontainer{
+            margin-left:220px;
+            padding: 20px,0;
+        }
+    </style>
+    <body>
+        <header>
+            <div class="container">
+            <div class="name">
+                <h1>HELLO USERS</h1>
+            </div>
+        </div>
+        </header>
+        <nav class="navcontainer">
+            <ul class="ullistcontainer">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+        <section class="sectioncontainer">
+            <div class="paracontainer">
+                <h1> hello guys, how are you....</h1>
+                <p>these are some services which are given by our company</p>
+            </div>
+        </section>
+    </body>
+</html>

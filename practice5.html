@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio practice</title>
+    </head>
+    <style>
+        body{
+            background-color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header{
+            background-color: rgb(231, 227, 222);
+            height: 480px;
+            text-align: center;
+            border-radius: 100px;
+            
+        }
+        header img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-top: 80px;
+        }
+        header nav{
+            width: 100%;
+        }
+        header ul{
+            display: flex;
+           justify-content: center;
+        }
+        header ul li{
+            list-style: none;
+            margin: 10px;
+        }
+        header ul li a{
+            text-decoration:none ;
+            color: black;
+            font-weight: bold;
+        }
+        header a:hover{
+            color: rgb(128, 128, 128);
+        }
+        .section-container{
+            background-color: beige;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .AllSection{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .handleSection{
+            border-radius: 50px;
+            width: 200px;
+            background-color: rgb(117, 120, 120);
+            margin: 10px;
+            height: 200px;
+            text-align: center;
+            line-height: 155px;
+        }
+        footer{
+            background-color: aquamarine;
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+        }
+    </style>
+    <body>
+        <header>
+            
+            <img src="./images/m1.jpg" alt="m1"/>
+            <h1>Pratik Kumar</h1>
+            <p> Web Developer|Android Development|Ui/Ux Designer</p> 
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Projects</a></li>
+                </ul>
+            </nav>      
+        
+        </header>
+        <main class="section-container">
+            <h1>Projects</h1>
+            <section class="AllSection">
+                <section class="handleSection">
+                    <p>project 1</p>
+                </section>
+                <section class="handleSection">
+                    <p>project 1</p>
+                </section>
+                <section class="handleSection">
+                    <p>project 1</p>
+                </section>
+                <section class="handleSection">
+                    <p>project 1</p>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <p>Contact me... If you like my profile</p>
+        </footer>
+    </body>
+</html>

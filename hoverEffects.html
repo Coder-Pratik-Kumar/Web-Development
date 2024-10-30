@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hover Effects</title>
+        <link rel="icon" href="./images/wheat.jpg">
+        <style>
+            body{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            header{
+                background-image: url("/images/new1.jpg");
+                height: 300px;
+                color: white;
+                text-align: center;
+                background-size: cover;
+                background-position: center;
+                padding: 50px 20px;
+            }
+            header h1{
+                font-size: 50px;
+                margin-bottom: 20px;
+            }
+            header p{
+                font-size: 20px;
+            }
+            .button_container{
+                background-color: blue;
+                border-radius: 10px;
+                color: aliceblue;
+                width: 100px;
+                height: 30px;
+                padding: 5px;
+                margin-top: 20px;
+                cursor: pointer;
+                transition: background-color 0.3s ;
+                transition: color 0.3s ;
+            }
+            .button_container:hover{
+                background-color: aquamarine;
+                color: black;
+            }
+            .features{
+                display:flex;
+                justify-content: center;
+                gap: 50px;
+                margin-top: 50px;
+                
+            }
+            .feature{
+                width: 300px;
+                text-align: center;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.2);
+                transition: transform 0.3s ease;
+                transition: boxx-shadow 0.3s ease;;
+            }
+            feature h1{
+                font-size: 20px;
+                box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            } 
+             .feature :hover{
+                transform: scale(1.05);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            }
+            footer{
+                background-color: rgb(22, 23, 57);
+                color: white;
+                text-align: center;
+                height: 50px;
+                line-height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to the services</h1>
+            <p>We provide many good services to the user</p>
+            <a href="Praxtice3.html" ><button class="button_container">Tell us</button></a>
+            
+        </header>
+        <section class = "features">mvf
+            
+            <div class = "feature">
+                <h1>Feature one</h1>
+                <p>
+                    Description of feature one
+                </p>
+            </div>
+            <div class="feature">
+                <h1>Feature Two</h1>
+                <p>
+                    Description of feature two
+                </p>
+            </div>
+        </section>
+        <footer>
+            <p>Thanks to watch it</p>
+        </footer>
+    </body>
+</html>

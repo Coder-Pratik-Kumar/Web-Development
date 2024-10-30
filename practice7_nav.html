@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NavBar</title>
+        <style>
+            body{
+                flex-direction: column;
+                margin :0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            header{
+                padding: 20px 0;
+                background-color: rgb(24, 68, 116);
+                color: white;
+                text-align: center;
+            }
+            .container{
+                display: flex;
+                flex-direction: row;
+            }
+            nav{
+                height: 100vh;
+                background-color: rgb(4, 4, 70);
+                width: 20%;
+                display: block;
+            }
+            nav ul{
+                list-style: none;
+                
+            }
+            nav ul li{
+                padding: 10px;
+            }
+            nav ul li a {
+                text-decoration: none;
+                color: white;
+                display: block;
+                padding: 10px;
+                transition: background-color 0.3s ease;
+            }
+            .section_container{
+                margin:20px;
+                width: 80%;
+            }
+            .lists{
+                background-color: beige;
+                padding: 15px;
+                margin: 10px;
+                border-radius: 120px;
+            }
+            nav ul li a:hover{
+                background-color: beige;
+                color: black;
+                border-radius: 10px;
+            } 
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>NavBar</h1>
+        </header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#list1">Introduction</a></li>
+                    <li><a href="#list2">Contact</a></li>
+                    <li><a href="#list3">Leetcode</a></li>
+                    <li><a href="#list4">Project</a></li>
+                </ul>
+            </nav>
+        
+        <main class="section_container">
+            <section class="lists" id="list1">
+                <h1>Introction</h1>
+                <p>My name is Pratik</p>
+            </section>
+            <section class="lists" id="list2">
+                <h1>Contact</h1>
+                <p>8859295480</p>
+            </section>
+            <section class="lists" id="list3">
+                <h1>Leetcode</h1>
+                <p>d;bqfcbbv;vacnDvq</p>
+            </section> 
+            <section class="lists" id="list4">
+                <h1>Project</h1>
+                <p>pROJECT 1 2 3  4</p>
+            </section>
+        </main>
+    </div>
+    </body>
+</html>

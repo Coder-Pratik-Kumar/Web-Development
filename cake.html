@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shiv Cake Bakery</title>
+        <style>
+            body{
+                background-image: url(./images/cake2.jpg);
+                background-size: cover;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                font-family: 'Times New Roman', Times, serif;
+
+            }
+            header{
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                background-color: rgb(220, 214, 170);
+                opacity: 0.9;
+                margin: 10px;
+                padding: 10px;
+                justify-content: space-between;
+                color: rgb(206, 35, 35);
+            }
+            nav ul{
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                margin: 20px;
+                padding: 10px;
+            }
+            nav ul li{
+                margin: 10px;
+            }
+            nav ul li a{
+                text-decoration: none;
+                color: red;
+                font-size: 20px;
+                font-weight: bold;
+                transition: color 0.3s ease;
+            }
+            .container{
+               float: right;
+               opacity: 0.65;
+               transition: opacity 0.3s ease;
+            }
+           .about{
+            width: 1000px;
+            font-weight: bold;
+            
+            padding: 20px;
+            
+            color: rgb(255, 255, 255);
+           }
+           .about h1{
+            font-size: xx-large;
+            color: black;
+           }
+           .about p{
+            font-size: 20px;
+            color: rgb(254, 247, 247);
+           }
+           .container:hover{
+            opacity: 1;
+            cursor: pointer;
+           }
+            nav a:hover{
+                color: aquamarine;
+            }
+           /* .types{
+            background-color: aliceblue;
+            padding: 2px;
+            margin: 100px 0 0 200px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            opacity: 0.8;
+           } */
+           
+           .collumn{
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            margin: 10px;
+            padding:20px;
+           
+           }
+           .new{
+            justify-content: center;
+                height: 450px;
+                display: flex;
+                width: 70%;
+                gap: 10px;
+                margin: 100px 0 0 200px;
+                margin-bottom: 100px;
+                opacity: 0.9;
+                
+           }
+           .new img{
+            width: 20%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: width 0.3s ease;
+           }
+          .new img:hover{
+            width: 25%;
+           }
+        </style>
+    </head>
+    <body>
+        
+        <header>
+            <h1>Shiv Cake Bakery</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="Praxtice3.html"> menu</a>
+                    </li>
+                    <li>
+                        <a href="#">about</a>
+                    </li>
+                    <li>
+                        <a href="#">contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+        <div class="container">
+            <a href="https://colorwhistle.com/bakery-website-design/" target="_blank"><img src="./images/cake3.webp" alt="cake" width="400px" height="300px"></a>
+        </div>
+        <section class="about">
+            <h1>
+                Hello Guys.....!
+            </h1>
+            <h3>Welocome to my shop</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe mollitia fuga ipsum beatae magni voluptas voluptatibus perferendis in. Minus quis totam aspernatur veniam ad ali
+                quid rem labore eos beatae nobis.</p>
+
+        </section>
+
+        <main class="types">         
+            <div class="new">
+                <img src="./images/m5.jpg"/>
+                <img src="./images/m6.jpg"/>
+                <img src="./images/m7.jpg"/>
+                <img src="./images/m8.jpg"/>
+            </div>
+        
+        </main>
+            
+        
+    </body>
+</html>

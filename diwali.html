@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Diwali</title>
+        <style>
+            body{
+                background-color: black;
+                font-family: 'Open Sans', sans-serif;
+                margin:0;
+            }
+            .container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                height: 100vh;
+                justify-content: center;
+            }
+            .cards{
+                display: flex;
+                height:75vh;
+                width:55vw;
+                border-radius: 10px;
+                background-image: linear-gradient(-225deg, #5271C4 0%, #B19FFF 48%, #ECA1FE 100%);
+            }
+        .left_card img{
+            width:200px ;
+            height: 200px;
+        }
+        .left_card h6{
+            font-size: 15px;
+        }
+        .left_card h1{
+            font-family: 'Kaushan Script', cursive;
+            font-size: 40px;
+        }
+        .left_card h3{
+            color: #B19FFF;
+            font-size: 20px;
+            margin: 10px;
+        }
+        .left_card{
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color:#292929;
+            width:calc(55vw / 2 + 3vw);
+            justify-content: center;
+            border-radius: 5px;
+        }
+        .right_card{
+            height:75vh;
+            width:calc(55vw / 2 - 3vw);
+            overflow: hidden;
+            padding:10px;
+        }
+        @keyframes rotating{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+        .right_card img{
+            height:100%;
+            margin-left:-92%;
+            animation: rotating 15s linear infinite;
+            filter: drop-shadow(#121212 0px 0px 5px);
+        }
+        @media screen and (max-width:630px){
+    .container{
+        height:fit-content;
+        padding:30px 0px;
+    }
+    .cards{
+        flex-direction:column;
+        width:98%;
+        height:fit-content;
+    }
+    .left_card{
+        width:100%;
+        order:2;
+        height:fit-content;
+        border-radius:10px;
+    }
+    .right_card{
+        width:100%;
+        height:fit-content;
+        order:1;
+    }
+    .right_card img{
+        margin:-53% 0px 0px 0px;
+        width:100%;
+        height:fit-content;
+    }
+}
+        
+        </style>
+        </head>
+
+    <body>
+        <div class="container">
+            <div class="cards">
+                <div class="left_card">
+                    <img src="./images/diya.png" alt="diya">
+                    <h6>2024</h6>
+                    <h3>Pratik Wishing you</h3>
+                    <h1>Happy<br>Diwali</h1>
+                </div>
+                <div class="right_card">
+                    <img src="./images/rangoli.png" alt="diya">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
