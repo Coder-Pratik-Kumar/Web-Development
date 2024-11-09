@@ -1,0 +1,42 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <style>  
+        body {  
+            background-color: black;  
+            overflow: hidden;  
+        }  
+        
+        .firecracker {  
+            position: absolute;  
+            width: 10px;  
+            height: 30px;  
+            background-color: red;  
+            bottom: 0; /* Start from the bottom */  
+            animation: explode 1s forwards;  
+        }  
+
+        @keyframes explode {  
+            0% { transform: translateY(0); }  
+            70% { transform: translateY(-300px); }  
+            100% { opacity: 0; }  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="firecracker"></div>  
+    <script>  
+        function createFirecracker() {  
+            let firecracker = document.createElement('div');  
+            firecracker.className = 'firecracker';  
+            firecracker.style.left = Math.random() * window.innerWidth + 'px';  
+            document.body.appendChild(firecracker);  
+            setTimeout(() => firecracker.remove(), 1000); // Remove after animation  
+        }  
+        
+        setInterval(createFirecracker, 500); // Create a firecracker every 500ms  
+    </script>  
+</body>  
+</html>

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Spotify</title>
+        <style>
+            body{
+                margin: 0;
+                background-color: black;
+                font-family: Arial, sans-serif;
+            }
+            .navbar{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding:10px 20px;
+                background-color: #000;
+                color: #fff;
+            }
+            .navbar .left_section,
+            .navbar .right_section{
+                display: flex;
+                align-items: center;
+            }
+            .navbar img.logo{
+                width:30px;
+                height: 30px;
+                margin-right: 20px;
+            }
+            .navbar .home,
+            .navbar .search{
+                width:20px;
+                height:20px;
+                margin-right: 10px;
+                transition: all 0.3s ease;
+            }
+            .navbar .home_button:hover{
+                background-color: #ccc;
+                transform: scale(1.2);
+            }
+            .navbar .search:hover{
+                transform: scale(1.05);
+                background-color: #ccc;
+            }
+            .navbar .search_bar:hover{
+                transform: scale(1.05);
+                background-color: #ccc;
+                color: black;
+                cur
+            }
+            .navbar .home_button,
+            .navbar .search_bar,
+            .navbar .cart{
+                display: flex;
+                align-items: center;
+                transition: all 0.3s ease;
+            }
+            .navbar .home_button{
+                background-color: #333;
+                border-radius: 50%;
+                padding: 10px;
+                cursor: pointer;
+                margin-right: 30px;
+            }
+            .navbar .search_bar{
+                display: flex;
+                align-items: center;
+                background-color: #333;
+                border-radius: 25px;
+                padding: 8px 15px;
+                cursor: pointer;
+            }
+            .navbar .search_bar input{
+                background: none;
+                border: none;
+                color: #ccc;
+                outline: none;
+                font-size: 14px;
+                width: 200px;
+                padding-left: 10px;
+            }
+            .navbar .search_bar input::placeholder{
+                color:#777;
+            }
+            .navbar .cart{
+                width:20px;
+                height:20px;
+                margin-right: 10px;
+            }
+            .navbar .button{
+                color: white;
+                margin: 0 10px;
+                cursor: pointer;
+                font-size: 14px;
+                text-decoration: none;
+            }
+            .navbar .button:hover{
+                color: #1db954;
+            }
+            .navbar .button_login{
+                padding: 5px 10px;
+                background-color: white;
+                color: black;
+                border-radius: 20px;
+                font-weight: bold;
+            }
+            .libraries{
+                max-width:400px;
+                background-color: #ccc;
+                border-radius: 15px;
+                margin: 20px;
+                background-color: #181818;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                height:100%;
+                position: fixed;
+            }
+            .libraries .book
+            {
+                width:30px;
+                height:30px;
+                padding: 10px;
+                background-color: #333;
+                border-radius: 15px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            .libraries .book:hover{
+                background-color: #b3b3b3;
+               transform: scale(1.05);
+            }
+            .libraries .plus{
+                width:30px;
+                height:30px;
+                padding: 10px;
+                background-color: #333;
+                border-radius: 15px;
+                margin-left: 90px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            .libraries .plus:hover{
+                background-color: #b3b3b3;
+               transform: scale(1.05);
+            }
+            .libraries .content{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px;
+                color: white;
+            }
+            .libraries .playlist{
+                background-color: #333;
+                border-radius: 15px;
+                padding: 10px;
+                margin: 10px;
+                color: white;
+                transition: all 0.3s ease;
+                .action_button{
+                    display: flex;
+                    color: black;
+                    border-radius: 15px;
+                    padding:8px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+            }
+            .libraries .playlist:hover{
+                transform: scale(1.05);
+                background-color: #1db954;
+                color:black
+            }
+            .libraries .action_button:hover{
+                transform: scale(1.05);
+                background-color: black;
+                color:white;
+            }
+            .footer{
+                padding: 20px;
+                text-align: center;
+                color: white;
+                font-size: 14px;
+            }
+            .footer-content{
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                flex-wrap: wrap;
+                margin-bottom: 10px;
+            }
+            .footer-content a{
+                color: #b3b3b3;
+                text-decoration: none;
+            }
+            .footer-content a:hover{
+                color: white;
+            }
+
+            .language{
+                display:flex;
+                align-items: center;
+                margin-top: 20px;
+            }
+            .language-button{
+                background-color: #333;
+                color: #fff;
+                border-radius: 20px;
+                border:none;
+                cursor: pointer;
+                padding: 10px 20px;
+            }
+        .main_container{
+            display: flex;
+        }
+        .features{
+            width:100%;
+            height:100%;
+            background-color: #333;
+            border-radius: 15px;
+            margin: 20px;
+            position:relative;
+            height:200vh;
+            margin-left:450px
+        }
+        .feature_chart{
+            padding: 20px;
+            color: white;
+            font-size:22px;
+            font-weight: bold;
+        }
+        .songs_menu{
+            display: flex;
+            flex-wrap:wrap;
+            gap: 15px;
+            text-align: center;
+        }
+        .songs_chart{
+            width:150px;
+            height: 150px;
+            padding:20px;
+            margin:10px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            box-shadow: #292a2a 0px 0px 0px, rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
+            background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 59%, rgba(253,187,45,1) 100%);
+        }
+        .songs_chart .text1{
+            margin:8px;
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+        }
+        .songs_chart:hover{
+            transform: scale(1.05);
+        }
+         .play {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #1db954;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: transform 0.3s, opacity 0.3s;
+            opacity: 0;
+            transform: scale(0.5);
+            cursor: pointer;
+            margin-left: 100px;
+            margin-bottom: 20px;
+            box-shadow: #292a2a 0px 0px 10px;
+        }
+        .songs_chart:hover .play{
+            opacity:1;
+            transform:scale(1);
+        }
+        .desc{
+            display: flex;
+            align-items: center;
+        }
+        .desc img{
+            width:20px;
+            height:20px;
+        }
+        .desc  .arrow{
+            background-color: #ccc;
+            border-radius: 15px;
+        }
+        .for_flex{
+            display: flex;
+        }
+        .description{
+            color:#ccc;
+            font-size: 14px;
+        }
+        .for_editors .editors_choice{
+            margin-top:70px;
+            margin-left: 20px;
+            margin-right: 20px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .footer2{
+            padding:20px;
+            margin-top: 60px;
+        }
+        .footer_content2{
+           margin:5px;
+        }
+        .Company .main_text1{
+            color: white;
+            font-weight:bold;
+        }
+        .Company .main_text{
+            color:#ccc;
+            margin-top:8px;
+        }
+        .Communities .main_text1{
+            color: white;
+            font-weight:bold;
+            margin-top:40px;
+        }
+        .Communities .main_text{
+            color:#ccc;
+            margin-top:8px;
+        }
+        .Usefullinks .main_text1{
+            color: white;
+            font-weight:bold;
+            margin-top:40px;
+        }
+        .Usefullinks .main_text{
+            color:#ccc;
+            margin-top:8px;
+        }
+        .Spotify_Plans .main_text1{
+            color: white;
+            font-weight:bold;
+            margin-top:40px;
+        }
+        .Spotify_Plans .main_text{
+            color:#ccc;
+            margin-top:8px;
+        }
+        .icons{
+            margin:20px;
+            padding: 20px;
+            border-bottom: .1px solid #cac4c4;
+        }
+        .icons img{
+            width:30px;
+            height:30px;
+            background-color: #ccc;
+            padding: 10px;
+            border-radius: 50px;
+            margin-left:10px;
+        }
+        .creator{
+            margin-left:20px;
+            color: #ccc;
+            font-weight: bold;
+        }
+        .gmail{
+            margin-left:20px;
+            color: #ccc;
+            font-weight: bold; 
+        }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="left_section">
+                <img src="./images/spotify.png" alt="spotify" class="logo">
+                <div class="home_button">
+                    <img src="./images/home.png" alt="home" class="home">
+                </div>
+            </div>
+            <div class="search_bar">
+                <img src="./images/loupe.png" alt="search" class="search">
+                <input type="text" placeholder="What Do You Want To Listen">
+                <img src="./images/shopping-bag.png" alt="shopping-bag" class="cart">
+            </div>
+            <div class="right_section">
+                <a href="#" class="button">Sign Up</a>
+                <a href="#" class="button_login">Log In</a>
+            </div>
+
+        </div>
+<div class="main_container">
+        <div class="libraries">
+            <div class="content">
+                <img src="./images/books.png" alt="books" class="book">
+                <h2>Your Libraries</h2>
+                    <img src="./images/plus.png" alt="plus" class="plus"></div>
+            <div class="Scroll_container">
+                <div class="playlist">
+                    <h2>Create your first playlist</h2>
+                    <p>It's easy, we'll help you</p>
+                    <button class="action_button">Create Playlist</button>
+                </div>
+                <div class="playlist">
+                    <h2>Let's find some podcasts to follow</h2>
+                    <p>We'll keep you updated on new episodes</p>
+                    <button class="action_button">Find Podcasts</button>
+                </div>
+            </div>
+            
+            <footer class ="footer">
+                <div class="footer-content">
+                    <a href="#">Legal</a>
+                    <a href="#">Safety & Privacy Center</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">About Ads</a>
+                    <a href="#">Accessibility</a>
+                </div>
+                <div class="language">
+                    <button class="language-button">English</button>
+                </div>
+            </footer>
+        </div>
+    <div class="features">
+        <div class="feature_chart">Featured Chart</div>
+        <div class="for_flex">
+            <div class="songs_menu">
+                <div class="songs_chart">
+                    <div class="text1">Top</div>
+                    <div class="text1">Songs</div>
+                    <div class="text1">Global</div>
+    
+                   
+                    <div class ="desc">
+                        <img src="./images/right-up.png" alt="arrow" class="arrow">
+                        <h4>Weekly Music Charts</h4>
+                        <div class="play">
+                            <img src="./images/play-button-arrowhead.png" alt="play" class="play_button">
+                        </div>
+                    </div>
+                    <div class="description">
+                        Your weekly update of the most played...
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="songs_menu">
+                <div class="songs_chart">
+                    <div class="text1">Top</div>
+                    <div class="text1">Songs</div>
+                    <div class="text1">Global</div>
+    
+                    <div class ="desc">
+                        <img src="./images/right-up.png" alt="arrow" class="arrow">
+                        <h4>Weekly Music Charts</h4>
+                        <div class="play">
+                            <img src="./images/play-button-arrowhead.png" alt="play" class="play_button">
+                        </div>
+                    </div>
+                    <div class="description">
+                        Your weekly update of the most played...
+                    </div>
+                </div>
+            </div>
+            <div class="songs_menu">
+                <div class="songs_chart">
+                    <div class="text1">Top</div>
+                    <div class="text1">Songs</div>
+                    <div class="text1">Global</div>
+    
+                    <div class ="desc">
+                        <img src="./images/right-up.png" alt="arrow" class="arrow">
+                        <h4>Weekly Music Charts</h4>
+                        <div class="play">
+                            <img src="./images/play-button-arrowhead.png" alt="play" class="play_button">
+                        </div>
+                    </div>
+                    <div class="description">
+                        Your weekly update of the most played...
+                    </div>
+                </div>
+            </div>
+            <div class="songs_menu">
+                <div class="songs_chart">
+                    <div class="text1">Top</div>
+                    <div class="text1">Songs</div>
+                    <div class="text1">Global</div>
+    
+                    <div class ="desc">
+                        <img src="./images/right-up.png" alt="arrow" class="arrow">
+                        <h4>Weekly Music Charts</h4>
+                        <div class="play">
+                            <img src="./images/play-button-arrowhead.png" alt="play" class="play_button">
+                        </div>
+                    </div>
+                    <div class="description">
+                        Your weekly update of the most played...
+                    </div>
+                </div>
+            </div>
+            <div class="songs_menu">
+                <div class="songs_chart">
+                    <div class="text1">Top</div>
+                    <div class="text1">Songs</div>
+                    <div class="text1">Global</div>
+    
+                    <div class ="desc">
+                        <img src="./images/right-up.png" alt="arrow" class="arrow">
+                        <h4>Weekly Music Charts</h4>
+                        <div class="play">
+                            <img src="./images/play-button-arrowhead.png" alt="play" class="play_button">
+                        </div>
+                    </div>
+                    <div class="description">
+                        Your weekly update of the most played...
+                    </div>
+                </div>
+            </div>
+        </div>
+      <div class="for_editors">
+        <div class="editors_choice">
+            Playlists from our Editors
+        </div>
+        <div class="for_flex">
+            <div class="songs_menu">
+                <div class="songs_chart">
+                    <div class="text1">Top</div>
+                    <div class="text1">Songs</div>
+                    <div class="text1">Global</div>
+    
+                    <div class ="desc">
+                        <img src="./images/right-up.png" alt="arrow" class="arrow">
+                        <h4>Weekly Music Charts</h4>
+                        <div class="play">
+                            <img src="./images/play-button-arrowhead.png" alt="play" class="play_button">
+                        </div>
+                    </div>
+                    <div class="description">
+                        Your weekly update of the most played...
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="songs_menu">
+                <div class="songs_chart">
+                    <div class="text1">Top</div>
+                    <div class="text1">Songs</div>
+                    <div class="text1">Global</div>
+    
+                    <div class ="desc">
+                        <img src="./images/right-up.png" alt="arrow" class="arrow">
+                        <h4>Weekly Music Charts</h4>
+                        <div class="play">
+                            <img src="./images/play-button-arrowhead.png" alt="play" class="play_button">
+                        </div>
+                    </div>
+                    <div class="description">
+                        Your weekly update of the most played...
+                    </div>
+                </div>
+            </div>
+            <div class="songs_menu">
+                <div class="songs_chart">
+                    <div class="text1">Top</div>
+                    <div class="text1">Songs</div>
+                    <div class="text1">Global</div>
+    
+                    <div class ="desc">
+                        <img src="./images/right-up.png" alt="arrow" class="arrow">
+                        <h4>Weekly Music Charts</h4>
+                        <div class="play">
+                            <img src="./images/play-button-arrowhead.png" alt="play" class="play_button">
+                        </div>
+                    </div>
+                    <div class="description">
+                        Your weekly update of the most played...
+                    </div>
+                </div>
+            </div>
+            <div class="songs_menu">
+                <div class="songs_chart">
+                    <div class="text1">Top</div>
+                    <div class="text1">Songs</div>
+                    <div class="text1">Global</div>
+    
+                    <div class ="desc">
+                        <img src="./images/right-up.png" alt="arrow" class="arrow">
+                        <h4>Weekly Music Charts</h4>
+                        <div class="play">
+                            <img src="./images/play-button-arrowhead.png" alt="play" class="play_button">
+                        </div>
+                    </div>
+                    <div class="description">
+                        Your weekly update of the most played...
+                    </div>
+                </div>
+            </div>
+            <div class="songs_menu">
+                <div class="songs_chart">
+                    <div class="text1">Top</div>
+                    <div class="text1">Songs</div>
+                    <div class="text1">Global</div>
+    
+                    <div class ="desc">
+                        <img src="./images/right-up.png" alt="arrow" class="arrow">
+                        <h4>Weekly Music Charts</h4>
+                        <div class="play">
+                            <img src="./images/play-button-arrowhead.png" alt="play" class="play_button">
+                        </div>
+                    </div>
+                    <div class="description">
+                        Your weekly update of the most played...
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="footer2">
+        <div class="footer_content2">
+            <div class="Company">
+                <div class="main_text1">Company</div>
+            <div class="main_text">About</div>
+            <div class="main_text">Jobs</div>
+            <div class="main_text">For the Record</div>
+            </div>
+            <div class="Communities">
+                <div class="main_text1">Communities</div>
+            <div class="main_text">For Artist</div>
+            <div class="main_text">Developers</div>
+            <div class="main_text">Advertising</div>
+            <div class="main_text">Investors</div>
+            <div class="main_text">Vendors</div>
+            </div>
+            <div class="Usefullinks">
+                <div class="main_text1">Useful Links</div>
+                <div class="main_text">Support</div>
+                <div class="main_text">Free Mobile App</div>
+                </div>
+                <div class="Spotify_Plans">
+                    <div class="main_text1">Spotify Plans</div>
+                    <div class="main_text">Premium Individuals</div>
+                    <div class="main_text">Premium Duo</div>
+                    <div class="main_text">Premium Family</div>
+                    <div class="main_text">Premium Student</div>
+                    <div class="main_text">Spotify Free</div>
+                    </div>
+
+        </div>
+      </div>
+      <div class="icons">
+        <img src="./images/instagram.png" alt="instagram" class="insta">
+        <img src="./images/twitter.png" alt="twitter" class="twitter">
+        <img src="./images/facebook-app-symbol.png" alt="facebook" class="facebook">
+      </div>
+      <div class="creator">
+        # Created By Pratik Kumar....
+      </div>
+      <div class="gmail">
+        @ pratiksharma5711@gmail.com
+      </div>
+    </div>
+</div>
+    </body>
+</html>
