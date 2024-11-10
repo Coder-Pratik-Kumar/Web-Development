@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Header Animation</title>
+        <style>
+            body{
+                margin:0;
+                padding:0;
+            }
+            .container{
+                width:100%;
+                background-color: black;
+                color: white;
+                display: flex;
+                gap:10px;
+                justify-content: center;
+            }
+            .container .home{
+                font-size: 20px;
+                padding: 10px;
+                transition: all 0.5s ease;
+                cursor:pointer;
+            }
+            .container div:hover {
+                background-color: white; 
+                color: black; 
+                border-radius: 15px; 
+            }
+            ::selection{
+                color: aquamarine;
+                background-color: red;
+            }
+        </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="home">home</div>
+                <div class="home">about</div>
+                <div class="home">contact</div>
+            </div>
+        </body>
+</html>

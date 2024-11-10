@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Position</title>
+<style>
+    .container{
+        width:400px;
+        height: 400px;  
+        background-color: aqua;  
+        margin:100px; 
+        position:relative;
+    }
+    .box1{
+        width:100px;
+        height: 100px;
+        background-color: red;
+        position:absolute;
+        top: 50px;
+        left:50px;
+    }
+    .box2{
+        width:100px;
+        height: 100px;
+        background-color: green;
+        position:sticky;
+        top: 50px;
+    }
+    .box3{
+        width:100px;
+        height: 100px;
+        background-color: blue;
+        position:fixed;
+        top: 50px;
+        right:0;
+    }
+</style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+        </div>
+    </body>
+</html>

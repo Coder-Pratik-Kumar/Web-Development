@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Navbar Web</title>
+        <style>
+            body{
+                margin:0;
+                padding: 0;
+            }
+            .maincontainer{
+                display: flex;
+            }
+            .navbar{
+                width:30%;
+                height:100vh;
+                background-color: black;
+                color: white;
+                padding: 20px;
+            }
+            .navbar ul{
+                list-style: none;
+            }
+            .navbar ul li{
+                margin:10px;
+                font-size: 20px;
+            }
+            .navbar ul li::before{
+                content:'';
+                width:10px;
+                height:10px;
+                background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 59%, rgba(253,187,45,1) 100%);
+                display: inline-block;
+                border-radius: 50%;
+            }
+            .navbar h2{
+                width: max-content;
+                position:relative;
+            }
+            .navbar h2::after{
+                content:'';
+                width:100%;
+                height:5px;
+                background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 59%, rgba(253,187,45,1) 100%);
+                display: inline-block;
+                position: absolute;
+                bottom:0;
+                left:0;
+                border-radius: 50px;
+                }
+            .navbar ul li a{
+                text-decoration: none;
+                color: white;
+                
+            }
+            .main_content{
+                width:70%;
+                height:100vh;
+                background-color: #ccc;
+                margin-left: 20px;
+                display: flex;
+            }
+            .main_content h1{
+                text-align: center;
+                margin-top: 20px;
+            }
+            .anim_container{
+                width:400px;
+                height:400px;
+                background-color:aqua;
+                margin: 20px;
+                display: flex;
+                justify-content:center;
+                align-items: center;
+                animation-name: loader;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-direction: alternate;
+                animation-fill-mode: forwards;
+                animation-delay: 2s;
+                
+            }
+
+            @keyframes loader{
+                0%{
+                    transform: rotate(0deg);
+                }100%{
+                    transform: rotate(360deg);
+                    border-radius: 50%;
+                    
+                }
+            }
+            .square{
+                width:100px;
+                height:100px;
+                border:aqua 5px solid;
+                margin:20px;
+                box-shadow: aqua 6px 6px 6px;
+                animation-name: square;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-direction: alternate;
+                animation-fill-mode: forwards;
+                animation-delay: 2s;
+            }
+            .square:hover{
+                animation-play-state: paused;
+            }
+            @keyframes square{
+                0%{
+                    transform: rotateX(180deg) rotateY(0deg) rotateZ(0deg);
+                }
+
+                50%{
+                    transform:rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+                }
+                100%{
+                    transform:rotateX(0deg) rotateY(0deg) rotateZ(180deg);
+                }
+            }
+           .button_anim{
+            width:200px;
+            height:200px;
+            background-color: aqua;
+            margin: 20px;
+            animation-name: button_anim;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-fill-mode:both
+           }
+           .button_anim:hover{
+            animation-play-state: paused;
+           }
+           @keyframes button_anim{
+            0%{
+                transform: rotate(0deg);
+            }
+            25%{
+                transform:rotate(50deg);
+                border-start-start-radius: 100px;
+                background-color: blueviolet;
+            }
+            50%{
+                transform:rotate(100deg);
+                border-start-end-radius: 100px;
+                background-color: blue;
+            }
+            75%{
+                transform:rotate(150deg);
+                border-top-left-radius: 100px;
+                background-color: antiquewhite;
+            }
+            100%{
+                transform:rotate(180deg);
+                border-bottom-left-radius: 200px;
+                background-color: aquamarine;
+            }
+           }
+           
+        </style>
+    </head>
+    <body>
+        <div class="maincontainer">
+            <div class="navbar">
+                <h2>Welcome Guys</h2>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main_content">
+                <div class="anim_container">
+                    Pratik Sharma
+                </div>
+                <div class="square"></div>
+                <div class="button_anim"></div>
+            </div>
+
+        </div>
+    </body>
+</html>
