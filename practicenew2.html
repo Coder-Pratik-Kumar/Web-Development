@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practicenew</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height:100vh;
+            margin:0;
+            background-color: black;
+        }
+        .container{
+            width:400px;
+            height:400px;
+            background-color: rgb(163, 159, 154);
+            border-radius:10px;
+            text-align: center;
+            color: whitesmoke;
+            position:relative;
+        }
+
+        @property --angle{
+            syntax: "<angle>";
+                initial-value: 0deg;
+                inherits: false;
+        }
+        .container::after, .container::before{
+            content: '';
+            position:absolute;
+            width:100%;
+            height:100%;
+            background-image: conic-gradient(from var(--angle),transparent 50%,rgb(85, 255, 0));
+            left:50%;
+            top:50%;
+            translate:-50% -50%;
+            z-index:-1;
+            padding: 3px;
+            border-radius: 10px; 
+            animation-name: rotate;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        .container::before{
+            filter: blur(1.5rem);
+        }
+        @keyframes rotate{
+            from{
+                --angle:0deg;
+            }
+            to{
+                --angle:360deg;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Hello Pratik</h2>
+        <p>The translate property allows you to change the position of elements.
+
+            The translate property defines x- and y-coordinates of an element in 2D. You can also define the z-coordinate to change position in 3D.
+            
+            Coordinates can be given as only x-coordinates, x- and y-coordinates, or x-, y- and z-coordinates.
+            
+            To better understand the translate property, view a demo.</p>
+    </div>
+</body>
+</html>
