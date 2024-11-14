@@ -9,18 +9,6 @@
         @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
         body{
             margin:0;
-            /* .conatiner{
-                font-family: 'Open Sans Condensed', sans-serif;
-                .wrapper{
-                    height:100vh;
-                    background-color: red;
-                    .title{
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                    }
-                }
-            } */
         }
         .container{
             font-family: 'Open Sans Condensed', sans-serif;
@@ -28,11 +16,166 @@
         .wrapper{
             height:100vh;
         }
-        .title{
-        position:absolute;
+        .background{
+            position:relative;
+            width:100%;
+            height:100%;
+            
+        }
+         .background img{
+            position: absolute;
+            width:100%;
+            height:100%;
+            object-fit: center;
+        } 
+        .title-wrapper{
+            position:absolute;
+            top:50%;
+            left:50%;
+        }
+        .title-wrapper .title{
+            font-family: 'Bangers', cursive;
+            color: white;
+            font-size: 100px;
+        }
+        .bg-filter{
+            position:absolute;
+            width:100%;
+            height:100%;
+            background-color: rgba(243, 37, 37, 0.5);
+        }
+        .arrow-down{
+            position:absolute;
+            left:53%;
+            bottom:10px;
+            cursor: pointer;
+        }
+        .arrow-down img{
+            width:50px;
+            height:50px;
+            animation: bounce 5s linear infinite;
+        }
+        @keyframes bounce{
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 0.5;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .content{
+            margin-left:50px;
+            padding: 10px;
+        }
+        .content h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Bangers', cursive;
+            font-size: 50px;
+        }
+        .content p{
+            text-align: justify;
+        }
+        .worktitle{
+            font-family: 'Bangers', cursive;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+        }
+        .work{
+            margin-left:50px;
+            padding: 10px;
+        }
+        .work-content .one {
         display: flex;
-         flex-direction: column;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        }
+
+        .work .work-content{
+            display: flex;
+        }
+        .work-content img{
+            width:200px;
+            height: 200px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(213, 28, 28, 0.5);
+            animation :bounce2 5s linear infinite;
+            cursor: pointer;
+            transition: all 2s linear;
+        }
+        @keyframes bounce2 {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+                box-shadow: 0 0 40px rgba(28, 213, 53, 0.5);
+            }
+            100% {
+                transform: translateY(0);
+                box-shadow: 0 0 30px rgba(130, 12, 96, 0.5);
+            }
+        }
+        .work-content img:hover{
+            animation: bounce 2s infinite;
+        }
+        .work-content .one h2{
+            font-family: 'Bangers', cursive;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+        }
+         .work-content .one p{
+            text-align:justify;
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+        .outro{
+            margin-left:50px;
+            padding: 10px;
+        } 
+        .outro h2{
+            font-family: 'Bangers', cursive;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+        }
+        .outro .outro-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .outro .outro-content p{
+            text-align: justify;
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+        .footer{
+            margin-top:50px;
+            padding: 10px;
+            background-color: rgb(233, 33, 33);
+        }
+        .footer-content{
+            margin:20px;
+
+        }
+        .footer-content p{
+            font-family: 'Open Sans Condensed', sans-serif;
+            color: white;
+            font-size: 15px;
+            font-weight:bold;
+            margin-left:50px;
         }
     </style>
 </head>
@@ -44,10 +187,55 @@
                 <img src="https://i.giphy.com/11QY4zzd3mqHe.gif" alt="" class="imgback">
                 <div class="bg-filter"></div>
             </div>
-            <div class="title">
-                Yeah
+            <div class="title-wrapper">
+                <div class="title">Yeah</div>
+            </div>
+            <div class="arrow-down">
+                <a href="#contentnew"><img src="./images/down-chevron.png" alt="" class="arrow"></a>
             </div>
         </div>
+        <div class="content">
+            <a data-scroll name="contentnew"></a>
+                    <h2>INTRO</h2>
+                <div class="intro-content">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                </div>
+        </div>
+        <div class="worktitle">
+            <h2>WORK</h2>
+            </div>
+        </div>
+        <div class="work">
+            <div class="work-content">
+                <div class="one">
+                    <div class="imgone">
+                        <img src="./images/pratik.jpg" alt="" class="imgoneback">
+                    </div>
+                    <h2>ONE</h2>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea tak
+                </div>
+                <div class="one">
+                    <div class="imgone">
+                        <img src="./images/Snapchat-864824242.jpg" alt="" class="imgtwoback">
+                    </div>
+                    <h2>TWO</h2>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea tak
+                </div>
+            </div>
+        </div>
+        <div class="outro">
+            <h2>OUTRO</h2>
+            <div class="outro-content">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea tak
+            </div>
+        </div>
+     </div>
+     <div class="footer">
+        <div class="footer-content">
+            <p>Follow me on Instagram</p>
+            <p>@___Pratik84___</p>
+            </div>
      </div>
 </body>
 </html>
