@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+</head>
+<style>
+    body{
+        margin:0;
+    }
+    .container {
+        width: 100%; /* Adjust height if needed */
+        padding: 10px;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(45deg, #1DA1F2, #52d163, #e350b9, #c9d748, #f0743b);
+        background-size: 400% 400%; /* Smooth gradient waves */
+        animation: waveAnimation 6s infinite ease-in-out;
+    }
+    .upper-content{
+        display: flex;
+        justify-content: space-between;
+    }
+    .upper-left-content{
+        display:flex;
+       align-items: center;
+       margin:50px;
+    }
+    .upper-left-content .icon img{
+        width:40px;
+        height: 50px;
+    }
+    .upper-left-content .idtwitter{
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+    }
+    .upper-right-content{
+        display:flex;
+        align-items: center;
+        margin:50px;
+    }
+    .upper-right-content .SignUp{
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        margin-right: 20px;
+        border:1px solid white;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .upper-right-content .Login {
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid white;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+    outline: none;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.436); /* Add a semi-transparent background */
+    backdrop-filter: blur(20px); /* This now works as the element has a transparent background */
+}
+
+
+@keyframes waveAnimation {
+        0% {
+            background-position: 0;
+        }
+        50% {
+            background-position: 50% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    .lower-content{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    .lower-content h2{
+        font-size: 40px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 10px;
+    }
+    .lower-content h3{
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 10px;
+    }
+    .lower-content p{
+        font-size: 16px;
+        color: white;
+        margin-bottom: 10px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="upper-content">
+            <div class="upper-left-content">
+                <div class="icon">
+                    <img src="images/twitter.png" alt="icon">
+                </div>
+                <div class="idtwitter">
+                    by @pratiksharma5711
+                </div>
+            </div>
+            <div class="upper-right-content">
+                <div class="SignUp">
+                    SignUp
+                </div>
+                <div class="Login">
+                    Login
+                </div>
+            </div>
+        </div>
+        <div class="lower-content">
+            <div class="name">
+                <h2>Pratik Sharma</h2>
+            </div>
+            <div class="profession">
+                <h2>Web Developer</h2>
+            </div>    
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, doloremque.</p>
+        </div>
+    </div>
+</body>
+</html>
