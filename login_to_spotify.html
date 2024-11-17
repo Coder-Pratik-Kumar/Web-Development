@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            background: linear-gradient(
+		#1c1c1c, black
+	);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            width:800px;
+            background: linear-gradient(
+		#1c1c1c, black
+	);
+            
+        }
+        .container .upper_content{
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .upper_content img{
+            width:100px;
+            height: 100px;
+        }
+        .upper_content .login{
+            font-size: 50px;
+            font-weight: bold;
+            font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+     
+.container .another_option{
+    
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    width:90%;
+    margin: 50px auto;
+    border-bottom: 2px solid white;
+    padding-bottom: 20px; 
+    margin-bottom: 20px; 
+}
+.another_option .option{
+    color: white;
+    width: 80%; 
+    height: 50px; 
+    font-size: 18px;
+    font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border: 1px solid white;
+    border-radius: 50px; 
+    padding: 10px;
+    display: flex;
+    justify-content:flex-start; 
+    align-items: center; 
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    background-color: transparent;
+}
+.another_option .option img{
+    width:40px;
+    height: 40px;
+    margin-right: 100px;
+}
+.option:hover{
+    border:2px solid rgb(15, 211, 15);
+}
+.container .login_option{
+            margin:50px;
+        }
+        .container .login_option .email{
+            color: white;
+            font-size:15px;
+            font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .container .login_option .email_input input{
+            width:100%;
+            height:50px;
+            margin-top:10px;
+            border-radius: 5px;
+            border:1px solid white;
+        }
+        .email_input input::placeholder{
+            padding: 10px;
+            font-size: 15px;
+            font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }  
+        .container .login_option .Password{
+            margin-top: 15px;
+            color: white;
+            font-size:15px;
+            font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .container .btn {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    margin-bottom:10px;          
+}
+.container .btn .next {
+    height: 50px;
+    width: 600px;
+    background-color: rgb(15, 211, 15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;    
+    font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+.last_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+.last_content .forgot_password a{
+    color: rgb(15, 211, 15);
+    font-weight: bold;
+}
+.last_content .haveanaccount{
+    margin-top:20px;
+    font-weight: bold;
+    color: white;
+}
+.last_content  .signup a{
+    color: rgb(15, 211, 15);
+    font-weight: bold;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="upper_content">
+            <img src="images/spotify.png" alt="spotify">
+            <div class="login">Login to Spotify</div>
+        </div>
+        <div class="another_option">
+            <div class="option">
+                <img src="images/search.png" alt="icon">
+                SignUp with Google
+            </div>
+            <div class="option">
+                <img src="images/facebook.png" alt="icon">
+                SignUp with Facebook
+            </div>
+            <div class="option">
+                <img src="images/apple (1).png" alt="icon">
+                SignUp with Apple
+            </div>
+        </div>
+        <div class="login_option">
+            <div class="email">
+                <div class="email_text">
+                    Email or username
+                </div>
+                <div class="email_input">
+                    <input type="text" placeholder="Email or username">
+                </div>
+            </div>
+            <div class="Password">
+                <div class="email_text">
+                    Password
+                </div>
+                <div class="email_input">
+                    <input type="password" placeholder="Password">
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <div class="next">Login</div>
+        </div>
+        <div class="last_content">
+            <div class="forgot_password">
+                <a href="#">Forgot your password?</a>
+            </div>
+            <div class="haveanaccount">
+                Don't have an account? 
+            </div>
+            <div class="signup">
+                <a href="#">Sign up for Spotify</a>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

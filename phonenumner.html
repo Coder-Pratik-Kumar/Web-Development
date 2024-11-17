@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phone_number</title>
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: auto;
+        }
+        .upper-content1{
+            color: white;
+            font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 30px;
+        }
+        .lower_content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top:60px;
+        }
+        .lower_content .select_option{
+            width:70px;
+        }
+        .select_option select {
+            background: #000; /* Match the background color */
+            color: #fff; /* White text */
+            border: 1px solid #fff; /* White border */
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            width:100%;
+            height: 50px;
+            border-radius: 10px;
+        }
+        .number input{
+            height: 30px;
+            border:1px solid white;
+            background-color: transparent;
+            border-radius: 10px;
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            margin-left:50px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="upper-content1">
+            Enter phone number
+        </div>
+        <div class="lower_content">
+            <div class="select_option">
+                <select id="countrycode">
+                    <option value="+91">+91</option>
+                    <option value="+1">+1</option>
+                    <option value="+44">+44</option>
+                </select>
+            </div>
+            <div class="number">
+                <input type="text" placeholder=" ">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

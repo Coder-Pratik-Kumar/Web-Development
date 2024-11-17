@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        .container{
+            width:500px;
+            height:auto;
+        }
+        .container .upper-content1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top:10px;
+        }
+        .container .upper-content1 .icon1 img{
+            width:100px;
+            height: 100px;
+        }
+        .container .upper-content1 .signupto{
+            font-size:50px;
+            color: white;
+            font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .container .upper-content1 .startlistening{
+            font-size:50px;
+            color: white;
+            font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .container .inputemail{
+            margin:50px;
+        }
+        .container .inputemail .email{
+            color: white;
+            font-size:15px;
+            font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .container .inputemail .inputtype input{
+            width:100%;
+            height:50px;
+            margin-top:10px;
+            border-radius: 5px;
+            border:1px solid white;
+        }
+        .inputtype input::placeholder{
+            padding: 10px;
+            font-size: 15px;
+            font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }  
+        .phone{
+            margin-top:20px;
+        } 
+        .phone a{
+            color: rgb(15, 211, 15);
+        }
+        .container .btn {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    margin-bottom:10px;          
+}
+.container .btn .next {
+    height: 50px;
+    width: 400px;
+    background-color: rgb(15, 211, 15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;    
+    font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+.container .divider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:80%;
+    margin: 10px auto;
+    padding: 50px 0;
+}
+.line{
+    flex: 1;
+    height: 1px;
+    background-color: rgb(245, 242, 242);
+}
+.or{
+            margin: 0 10px; 
+            font-size: 16px; 
+            font-weight: bold;
+            color: rgb(247, 243, 243);
+}
+
+.conatainer .another_option .option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.another_option{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    width:80%;
+    margin: 10px auto;
+    border-bottom: 2px solid rgb(245, 242, 242);
+    padding-bottom: 20px; 
+    margin-bottom: 20px; 
+}
+.another_option .option{
+    width: 80%; 
+    height: 50px; 
+    font-size: 18px;
+    font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border: 1px solid white;
+    border-radius: 50px; 
+    padding: 10px;
+    display: flex;
+    justify-content:flex-start; 
+    align-items: center; 
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    background-color: transparent;
+}
+.another_option .option img{
+    width:40px;
+    height: 40px;
+    margin-right: 50px;
+}
+.option:hover{
+    border:2px solid rgb(15, 211, 15);
+}
+.haveanaccount{
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+}
+.haveanaccount .text1{
+    font-family: 'Circular','Helavetica Neue', Helvetica, Arial, sans-serif;
+    color: white;
+}
+.haveanaccount .text2 a{
+    font-family: 'Circular','Helavetica Neue', Helvetica, Arial, sans-serif;
+    color: rgb(15, 211, 15);
+    margin-left:5px;
+}
+.policy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Circular','Helavetica Neue', Helvetica, Arial, sans-serif;
+}
+.policy .first{
+    font-size: 15px;
+    color: white;
+}
+.policy .second{
+    font-size: 15px;
+    color: white;
+}
+.policy .second a{
+    color: rgb(15, 211, 15);
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="upper-content1">
+            <div class="icon1">
+                <img src="images/spotify.png" alt="icon">
+            </div>
+            <div class="signupto">
+                Sign up to
+            </div>
+            <div class="startlistening">
+                Start listening
+            </div>
+        </div>
+        <div class="inputemail">
+            <div class="email">
+                Email address
+            </div>
+            <div class="inputtype">
+                <input type="text" placeholder="Enter your email address" required>
+            </div>
+            <div class="phone">
+                <a href="#">Use phone number instead.</a>
+            </div>
+
+        </div>
+        <div class="btn">
+            <div class="next">Next</div>
+        </div>
+        <div class="divider">
+            <div class="line"></div>
+            <div class="or">or</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="another_option">
+            <div class="option">
+                <img src="images/search.png" alt="icon">
+                SignUp with Google
+            </div>
+            <div class="option">
+                <img src="images/facebook.png" alt="icon">
+                SignUp with Facebook
+            </div>
+            <div class="option">
+                <img src="images/apple (1).png" alt="icon">
+                SignUp with Apple
+            </div>
+        </div>
+        <div class="haveanaccount">
+            <div class="text1">Already have an account?</div>
+            <div class="text2"><a href="#">Login here.</a></div>
+        </div>
+        <div class="policy">
+            <div class="first">This site is protected by reCAPTCHA and the Google</div>
+            <div class="second">
+                <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply
+            </div>
+        </div>
+    </div>
+</body>
+</html>
