@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hambergur</title>
+
+    <style>
+        body{
+            background-color: var(--back-color);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+        }
+        .container{
+            height: 100px;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform-style: preserve-3d;
+        }
+
+        :root{
+            --back-color: black;
+            --line-hight: 20px;
+            --line-width: 120px;
+        }
+        .line{
+            background-color: white;
+            width: var(--line-width);
+            height: var(--line-hight);
+            border-radius: 50px;
+            margin: 10px;
+            cursor: pointer;
+            transition: 0.5s linear;
+        }
+        .container:hover > .a{
+            transform: translateY(35px) rotateZ(45deg);
+        }
+        .container:hover > .c{
+            transform: translateY(-35px) rotateZ(-45deg);
+        }
+        .container:hover > .b{
+            background: var(--back-color);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="line a"></div>
+    <div class="line b"></div>
+    <div class="line c"></div>
+    </div>
+</body>
+</html>
