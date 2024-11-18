@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body{
+            height: 100vh;
+            margin:0;
+            padding: 0;
+        }
+        *{
+            scroll-behavior: smooth;
+        }
+        ::-webkit-scrollbar{
+            display: none;
+        }
+        .nav_bar{
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            border:2px solid grey;
+            border-radius: 50px;
+            top:50%;
+            left:2.5%;
+            align-items: center;
+            padding: 20px;
+            background: #ffffff90;
+            backdrop-filter: blur(1.5rem);
+            border: none;
+            box-shadow: 0 0 5rem black;
+        }
+        .nav_bar .about:hover{
+            color: blue;
+        }
+        .nav_bar .circle:hover{
+            color: red;
+        }
+        .nav_bar .city:hover{
+            color:green ;
+        }
+        .nav_bar a{
+            color: black;
+        }
+        .content1{
+            width:100%;
+            height: 100%;
+            background-color: rgb(157, 157, 239);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .content1 h1{
+            font-size: 50px;
+            color:rgb(55, 55, 240);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .content1 p{
+            font-size: 20px;
+            margin-left: 120px;
+            margin-right: 120px;
+            color:rgb(55, 55, 240);
+        }
+        .content2{
+            width:100%;
+            height: 100%;
+            background-color: rgb(228, 130, 130);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .content2 h1{
+            font-size: 50px;
+            color:rgb(247, 42, 42);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .content2 p{
+            font-size: 20px;
+            margin-left: 120px;
+            margin-right: 120px;
+            color:rgb(247, 42, 42);
+        }
+        .content3{
+            width:100%;
+            height: 100%;
+            background-color: rgb(124, 214, 124);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .content3 h1{
+            font-size: 50px;
+            color:rgb(7, 86, 7);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .content3 p{
+            font-size: 20px;
+            margin-left: 120px;
+            margin-right: 120px;
+            color:rgb(7, 86, 7);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav_bar">
+        <a href="#sec1">
+            <i class=" about fas fa-home" id="s1"></i>
+        </a>
+        <a href="#sec2">
+            <i class=" circle fas fa-circle-info " id="s2"></i>
+        </a>
+        <a href="#sec3">
+            <i class=" city fas fa-city" id="s3"></i>
+        </a>
+    </div>
+    <div class="content1" id="sec1">
+        <h1>WELCOME TO HOME</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum expedita beatae deleniti amet, consectetur eaque doloribus quaerat, molestiae reiciendis modi delectus temporibus obcaecati laborum facere in sint repudiandae ex quam fugiat assumenda ipsum. Natus id, cum soluta sint ad architecto magni, minima magnam quasi maiores laboriosam expedita dolorem ea hic voluptates. Dolorum at ipsa veniam molestias, neque porro doloribus perspiciatis, dolores recusandae vero vitae beatae saepe. Veritatis illum ullam officia ut, explicabo aliquid at, adipisci nostrum obcaecati similique corrupti perspiciatis. Beatae assumenda quo eligendi dicta impedit recusandae natus? Exercitationem, hic in nihil pariatur explicabo nemo natus repellat. Porro, magnam aut.</p>
+    </div>
+    <div class="content2" id="sec2">
+        <h1>WELCOME TO Information</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum expedita beatae deleniti amet, consectetur eaque doloribus quaerat, molestiae reiciendis modi delectus temporibus obcaecati laborum facere in sint repudiandae ex quam fugiat assumenda ipsum. Natus id, cum soluta sint ad architecto magni, minima magnam quasi maiores laboriosam expedita dolorem ea hic voluptates. Dolorum at ipsa veniam molestias, neque porro doloribus perspiciatis, dolores recusandae vero vitae beatae saepe. Veritatis illum ullam officia ut, explicabo aliquid at, adipisci nostrum obcaecati similique corrupti perspiciatis. Beatae assumenda quo eligendi dicta impedit recusandae natus? Exercitationem, hic in nihil pariatur explicabo nemo natus repellat. Porro, magnam aut.</p>
+    </div>
+    <div class="content3" id="sec3">
+        <h1>WELCOME TO city</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum expedita beatae deleniti amet, consectetur eaque doloribus quaerat, molestiae reiciendis modi delectus temporibus obcaecati laborum facere in sint repudiandae ex quam fugiat assumenda ipsum. Natus id, cum soluta sint ad architecto magni, minima magnam quasi maiores laboriosam expedita dolorem ea hic voluptates. Dolorum at ipsa veniam molestias, neque porro doloribus perspiciatis, dolores recusandae vero vitae beatae saepe. Veritatis illum ullam officia ut, explicabo aliquid at, adipisci nostrum obcaecati similique corrupti perspiciatis. Beatae assumenda quo eligendi dicta impedit recusandae natus? Exercitationem, hic in nihil pariatur explicabo nemo natus repellat. Porro, magnam aut.</p>
+    </div>
+</body>
+<script>
+// var x=1;
+// var d=document.getElementById("s1");
+// var colors = ["rgb(157, 157, 239)", "rgb(228, 130, 130)", "rgb(124, 214, 124)"];
+
+// setInterval(() => {
+//     location.href="#sec"+x;
+//     if(x==1) d.classList.remove(colors[2]);
+//     else d.classLiist.remove(colors[x-2]);
+
+//     d=dcment.getElementById("s"+x);
+//     d.classList.add(colors[x++-1]);
+//     if(x==4) x=1;
+// },2500);
+// </script>
+
+</html>
