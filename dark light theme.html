@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dark</title>
+    <style>
+        /* Base theme (Light mode by default) */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+/* Dark mode theme */
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #ffffff;
+}
+
+/* Apply the variables */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+    </style>
+</head>
+<body>
+    <button id="theme-toggle">Toggle Theme</button>
+
+</body>
+<script>
+    const themeToggle = document.getElementById("theme-toggle");
+const currentTheme = localStorage.getItem("theme");
+
+// Apply the saved theme on load
+if (currentTheme) {
+  document.documentElement.setAttribute("data-theme", currentTheme);
+}
+
+// Toggle theme on button click
+themeToggle.addEventListener("click", () => {
+  const theme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+});
+
+</script>
+</html>
